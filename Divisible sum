@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main() {
+	int n, k, i, j, div = 0;
+	int a[100];
+	scanf("%d", &n);
+	scanf("%d", &k);
+	for (i = 0; i < n; i++) {
+		scanf("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++) {
+		for (j = i; j <= i; j++) {
+			a[i] == a[j];
+		}
+	}
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			if (i < j && (a[i] + a[j]) % k == 0) {
+				div = div + 1;
+			}
+		}
+	}
+	printf("%d\n", div);
+	return 0;
+}
