@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(){
+long long int s,t,a,b,m,n;
+long long int d1,d2,ap[100000],or[100000],t1=0,t2=0;
+int i;
+scanf("%lld%lld",&s,&t);
+scanf("%lld%lld",&a,&b);
+scanf("%lld%lld",&m,&n);
+for(i=1;i<=m;i++){
+    scanf("%lld",&ap[i]);
+}
+for(i=1;i<=n;i++){
+    scanf("%lld",&or[i]);
+}
+for(i=1;i<=m;i++){
+    d1=(a+ap[i]);
+    if(d1>=s&&d1<=t){
+        t1++;
+    }
+}
+for(i=1;i<=m;i++){
+    d2=(b+or[i]);
+    if(d2>=s&&d2<=t){
+        t2++;
+    }
+}
+printf("%lld\n",t1);
+printf("%lld\n",t2);
+return 0;
+}
