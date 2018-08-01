@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main() {
+	int i, j, T, N[100], m, M[100];
+	scanf("%d", &T);
+	for (i = 0; i < T; i++) {
+		scanf("%d", &N[i]); 
+		m = 1;
+		if (N[i] != 0) {
+			for (j = 1; j <= N[i]; j++) {
+				if (j % 2 != 0)
+					m *=  2;
+				else
+					m += 1;
+			}
+		}
+		M[i] = m;
+	}
+	for (i = 0; i < T; i++) {
+		printf("%d\n", M[i]);
+	}
+	return 0;
+}
