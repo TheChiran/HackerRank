@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main() {
+	int n, p, min;
+	scanf("%d%d", &n, &p);
+	min = (n / 2) - (p / 2);
+	if (min > p / 2)
+		min = p / 2;
+	printf("%d\n", min);
+	return 0;
+}
