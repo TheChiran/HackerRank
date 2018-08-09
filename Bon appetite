@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main() {
+	long long int n, k, bill[100000], i, b, sum = 0;
+	scanf("%lld%lld", &n, &k);
+	for (i = 0; i < n; i++) {
+		scanf("%lld", &bill[i]);
+	}
+	scanf("%lld", &b);
+	for (i = 0; i < n; i++) {
+		sum += bill[i];
+	}
+	sum = (sum - bill[k]) / 2;
+	
+	
+	if (sum == b)
+		printf("Bon Appetit\n");
+	else
+		printf("%lld\n", b - sum);
+	return 0;
+}
