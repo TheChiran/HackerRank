@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main() {
+	long long int i, j, n, arr[100000], type[100000], sum = 0, type_sum[100000], max = 0;
+	scanf("%lld", &n);
+	for (j = 0; j < n; j++) {
+		scanf("%lld", &arr[j]);
+	}
+	for (i = 1; i <= 5; i++) {
+		type[i] = i;
+	}
+	for (i = 1; i <= 5; i++) {
+		sum = 0;
+		for (j = 0; j < n; j++) {
+			if (type[i] == arr[j])
+				sum++;
+		}
+		type_sum[i] = sum;
+	}
+	for (i = 1; i <= 5; i++) {
+		if (type_sum[i] > max)
+			max = i;
+		
+		
+	}
+	printf("%lld\n", max);
+
+	return 0;
+}
